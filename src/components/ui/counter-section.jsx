@@ -160,7 +160,7 @@ export const CounterSection = () => {
     <motion.section 
       className="w-full relative overflow-hidden py-8 sm:py-2"
       style={{
-        background: 'linear-gradient(90deg, #782821 19.71%, #EE594C 52.88%, #782821 84.13%)'
+        background: '#2D2420'
       }}
       initial="hidden"
       whileInView="visible"

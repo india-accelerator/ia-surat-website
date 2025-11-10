@@ -189,7 +189,7 @@ export const EligibilityCriteriaSection = () => {
       id="eligibility-criteria"
       className="w-full py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #E65B4E 0%, #922A20 100%)'
+        background: 'linear-gradient(180deg, #8B7355 0%, #5D4A3D 100%)'
       }}
       initial="hidden"
       whileInView="visible"

@@ -120,7 +120,7 @@ const defaultNavigationLinks = [
   { href: '#about', label: 'About' },
   { href: '#what-to-expect', label: 'What To Expect' },
   { href: '#eligibility-criteria', label: 'Eligibility Criteria' },
-  { href: '#why-bigshift', label: 'Why BIGShift?' },
+  { href: '#why-bigshift', label: 'Why Us?' },
   { href: '#timeline', label: 'Queries' },
 ];
 
@@ -268,10 +268,10 @@ export const Navbar01 = React.forwardRef(({
           className
         )}
         style={isScrolled ? {
-          backgroundColor: 'rgba(30, 7, 30, 0.85)',
+          backgroundColor: '#2d2420b8',
           backdropFilter: 'blur(12px) saturate(180%)',
           WebkitBackdropFilter: 'blur(12px) saturate(180%)',
-        } : { backgroundColor: '#1E071EE5' }}
+        } : { backgroundColor: '#2D2420' }}
         {...props}
       >
         <div className="container mx-auto flex h-14 sm:h-16 max-w-screen-2xl items-center gap-2 sm:gap-3 md:gap-4 relative">
@@ -299,7 +299,7 @@ export const Navbar01 = React.forwardRef(({
                           effect="hoverUnderline"
                           onClick={(e) => handleNavClick(e, link.href, true)}
                           className={cn(
-                            "w-full justify-start rounded-md px-3 py-2 text-xs sm:text-sm font-medium uppercase",
+                            "w-full justify-start rounded-md px-3 py-2 text-xs sm:text-sm font-medium ",
                             link.active
                               ? "bg-white/10 text-white hover:text-black hover:bg-white"
                               : "text-white/80 hover:text-black hover:bg-white"
@@ -346,7 +346,7 @@ export const Navbar01 = React.forwardRef(({
                       effect="hoverUnderline"
                       onClick={(e) => handleNavClick(e, link.href)}
                       className={cn(
-                        "h-9 px-4 py-2 text-sm font-medium uppercase",
+                        "h-9 px-4 py-2 text-sm font-medium ",
                         link.active
                           ? "text-white hover:text-black"
                           : "text-white/80 hover:text-black"
@@ -370,7 +370,7 @@ export const Navbar01 = React.forwardRef(({
             iconPlacement="right"
             className="text-xs sm:text-sm font-medium px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 h-8 sm:h-9 rounded-full shadow-sm text-white hover:opacity-90 whitespace-nowrap"
             style={{
-              background: 'linear-gradient(90deg, #4C231F 12.02%, #8D413A 49.04%, #4C231F 91.83%)',
+              background: 'linear-gradient(90deg, #2D2420 12.02%, #5D4A3D 49.04%, #2D2420 91.83%)',
               border: 'none'
             }}
             onClick={(e) => {
@@ -403,10 +403,10 @@ export const Navbar01 = React.forwardRef(({
         className={`w-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 overflow-hidden transition-all duration-300 ease-in-out ${
           isSubNavbarClosing ? 'opacity-0 max-h-0 py-0' : 'opacity-100 max-h-20 sm:max-h-24'
         }`}
-        style={{ backgroundColor: '#F8DCD9' }}
+        style={{ backgroundColor: '#F5EAD7' }}
       >
         <div className="container mx-auto flex items-center justify-between max-w-screen-2xl gap-2 sm:gap-3 md:gap-4">
-          <p className="text-xs sm:text-sm md:text-base flex-1 text-left pr-2 sm:pr-0 leading-tight sm:leading-normal" style={{ color: '#782821' }}>
+          <p className="text-xs sm:text-sm md:text-base flex-1 text-left pr-2 sm:pr-0 leading-tight sm:leading-normal" style={{ color: '#2D2420' }}>
             {subNavbarText}
           </p>
           <button
@@ -417,7 +417,7 @@ export const Navbar01 = React.forwardRef(({
               }, 300); // Match the transition duration
             }}
             className="shrink-0 p-1 hover:opacity-70 transition-opacity"
-            style={{ color: '#4C231F' }}
+            style={{ color: '#2D2420' }}
             aria-label="Close banner"
           >
             <CloseIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />

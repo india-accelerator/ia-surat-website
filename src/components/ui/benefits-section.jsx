@@ -55,7 +55,7 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
     <motion.div
       className="group relative p-6 sm:p-8 transition-all duration-300 cursor-pointer h-full flex flex-col"
       style={{
-        background: 'linear-gradient(324.12deg, #F7CBC7 -7.78%, #FFFFFF 99.7%)'
+        background: 'linear-gradient(324.12deg, #F5EAD7 -7.78%, #FEFBF7 99.7%)'
       }}
       variants={cardVariants}
       initial="hidden"
@@ -72,7 +72,7 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
           isHovered ? 'shadow-2xl scale-[1.02]' : 'shadow-md scale-100'
         }`}
         style={{
-          background: 'linear-gradient(324.12deg, #F7CBC7 -7.78%, #FFFFFF 99.7%)',
+          background: 'linear-gradient(324.12deg, #F5EAD7 -7.78%, #FEFBF7 99.7%)',
           zIndex: -1
         }}
       />
@@ -84,7 +84,7 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
             isHovered ? 'scale-110' : 'scale-100'
           }`}
           style={{
-            background: 'linear-gradient(39.47deg, #4D2420 5.65%, #BF483C 51.32%, #782821 103.43%)'
+            background: 'linear-gradient(39.47deg, #2D2420 5.65%, #3D3530 51.32%, #2D2420 103.43%)'
           }}
           variants={iconVariants}
         >
@@ -95,8 +95,8 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
 
         {/* Card Title */}
         <motion.h3 
-          className="text-lg sm:text-xl md:text-2xl font-bold mb-3 text-[#222] group-hover:text-[#000] transition-colors duration-300"
-          style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+          className="text-lg sm:text-xl md:text-2xl font-bold mb-3 transition-colors duration-300"
+          style={{ fontFamily: 'var(--font-poppins), sans-serif', color: '#2D2420' }}
           variants={textVariants}
         >
           {title}
@@ -104,8 +104,8 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
 
         {/* Card Description */}
         <motion.p 
-          className="text-sm sm:text-base text-[#E55B4D] font-light leading-relaxed group-hover:text-[#D44A3D] transition-colors duration-300"
-          style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+          className="text-sm sm:text-base font-light leading-relaxed transition-colors duration-300"
+          style={{ fontFamily: 'var(--font-poppins), sans-serif', color: '#5D4A3D' }}
           variants={textVariants}
         >
           {description}
@@ -169,7 +169,7 @@ export const BenefitsSection = () => {
       id="why-bigshift"
       className="w-full py-16 sm:py-20 md:py-24 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(90deg, #000410 0%, #350602 100%)'
+        background: 'linear-gradient(135deg, #3D3530 0%, #1A1512 100%)'
       }}
       initial="hidden"
       whileInView="visible"
@@ -186,7 +186,7 @@ export const BenefitsSection = () => {
             className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-4"
             style={{ 
               fontFamily: 'var(--font-poppins), sans-serif',
-              color: '#E55B4D'
+              color: '#D4A574'
             }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -272,83 +272,83 @@ export const BenefitsSection = () => {
                 <defs>
                   {/* Animated Beam Gradients */}
                   <linearGradient id="beam1" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="0%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="-0.5;1.5" dur="3s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="10%" stopColor="#E55B4D" stopOpacity="1">
+                    <stop offset="10%" stopColor="#D4A574" stopOpacity="1">
                       <animate attributeName="offset" values="-0.4;1.6" dur="3s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="50%" stopColor="#FF8A7A" stopOpacity="1">
+                    <stop offset="50%" stopColor="#E8C99A" stopOpacity="1">
                       <animate attributeName="offset" values="0;2" dur="3s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="100%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="100%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="0.5;2.5" dur="3s" repeatCount="indefinite" />
                     </stop>
                   </linearGradient>
                   
                   <linearGradient id="beam2" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="0%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="-0.5;1.5" dur="3.5s" begin="0.5s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="10%" stopColor="#E55B4D" stopOpacity="1">
+                    <stop offset="10%" stopColor="#D4A574" stopOpacity="1">
                       <animate attributeName="offset" values="-0.4;1.6" dur="3.5s" begin="0.5s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="50%" stopColor="#FF8A7A" stopOpacity="1">
+                    <stop offset="50%" stopColor="#E8C99A" stopOpacity="1">
                       <animate attributeName="offset" values="0;2" dur="3.5s" begin="0.5s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="100%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="100%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="0.5;2.5" dur="3.5s" begin="0.5s" repeatCount="indefinite" />
                     </stop>
                   </linearGradient>
                   
                   <linearGradient id="beam3" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="0%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="-0.5;1.5" dur="4s" begin="1s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="10%" stopColor="#E55B4D" stopOpacity="1">
+                    <stop offset="10%" stopColor="#D4A574" stopOpacity="1">
                       <animate attributeName="offset" values="-0.4;1.6" dur="4s" begin="1s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="50%" stopColor="#FF8A7A" stopOpacity="1">
+                    <stop offset="50%" stopColor="#E8C99A" stopOpacity="1">
                       <animate attributeName="offset" values="0;2" dur="4s" begin="1s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="100%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="100%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="0.5;2.5" dur="4s" begin="1s" repeatCount="indefinite" />
                     </stop>
                   </linearGradient>
                   
                   <linearGradient id="beam4" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="0%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="-0.5;1.5" dur="3.2s" begin="1.5s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="10%" stopColor="#E55B4D" stopOpacity="1">
+                    <stop offset="10%" stopColor="#D4A574" stopOpacity="1">
                       <animate attributeName="offset" values="-0.4;1.6" dur="3.2s" begin="1.5s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="50%" stopColor="#FF8A7A" stopOpacity="1">
+                    <stop offset="50%" stopColor="#E8C99A" stopOpacity="1">
                       <animate attributeName="offset" values="0;2" dur="3.2s" begin="1.5s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="100%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="100%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="0.5;2.5" dur="3.2s" begin="1.5s" repeatCount="indefinite" />
                     </stop>
                   </linearGradient>
                   
                   <linearGradient id="beam5" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="0%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="-0.5;1.5" dur="3.8s" begin="2s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="10%" stopColor="#E55B4D" stopOpacity="1">
+                    <stop offset="10%" stopColor="#D4A574" stopOpacity="1">
                       <animate attributeName="offset" values="-0.4;1.6" dur="3.8s" begin="2s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="50%" stopColor="#FF8A7A" stopOpacity="1">
+                    <stop offset="50%" stopColor="#E8C99A" stopOpacity="1">
                       <animate attributeName="offset" values="0;2" dur="3.8s" begin="2s" repeatCount="indefinite" />
                     </stop>
-                    <stop offset="100%" stopColor="#E55B4D" stopOpacity="0">
+                    <stop offset="100%" stopColor="#D4A574" stopOpacity="0">
                       <animate attributeName="offset" values="0.5;2.5" dur="3.8s" begin="2s" repeatCount="indefinite" />
                     </stop>
                   </linearGradient>
                 </defs>
                 
                 {/* Base Connection Lines (static) - Mobile */}
-                <g stroke="#E55B4D" strokeWidth="2" fill="none" opacity="0.2" className="mobile-markers">
+                <g stroke="#D4A574" strokeWidth="2" fill="none" opacity="0.2" className="mobile-markers">
                   <path d="M820,250 Q530,200 240,190" />
                   <path d="M820,250 Q700,195 580,140" />
                   <path d="M820,250 Q755,245 690,240" />
@@ -368,7 +368,7 @@ export const BenefitsSection = () => {
                 </g>
                 
                 {/* Base Connection Lines (static) - Desktop */}
-                <g stroke="#E55B4D" strokeWidth="2" fill="none" opacity="0.2" className="desktop-markers">
+                <g stroke="#D4A574" strokeWidth="2" fill="none" opacity="0.2" className="desktop-markers">
                   <path d="M795,370 Q537,310 280,250" />
                   <path d="M795,370 Q702,305 610,240" />
                   <path d="M795,370 Q722,332 650,295" />
@@ -390,44 +390,44 @@ export const BenefitsSection = () => {
                 {/* Country Markers - Mobile (larger) */}
                 <g className="mobile-markers">
                   {/* USA */}
-                  <circle cx="240" cy="190" r="10" fill="#E55B4D" />
-                  <circle cx="240" cy="190" r="14" fill="#E55B4D" opacity="0.3">
+                  <circle cx="240" cy="190" r="10" fill="#D4A574" />
+                  <circle cx="240" cy="190" r="14" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="14;20;14" dur="2s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* Germany */}
-                  <circle cx="580" cy="140" r="10" fill="#E55B4D" />
-                  <circle cx="580" cy="140" r="14" fill="#E55B4D" opacity="0.3">
+                  <circle cx="580" cy="140" r="10" fill="#D4A574" />
+                  <circle cx="580" cy="140" r="14" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="14;20;14" dur="2s" begin="0.2s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* Saudi Arabia */}
-                  <circle cx="690" cy="240" r="10" fill="#E55B4D" />
-                  <circle cx="690" cy="240" r="14" fill="#E55B4D" opacity="0.3">
+                  <circle cx="690" cy="240" r="10" fill="#D4A574" />
+                  <circle cx="690" cy="240" r="14" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="14;20;14" dur="2s" begin="0.4s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* UAE */}
-                  <circle cx="725" cy="250" r="10" fill="#E55B4D" />
-                  <circle cx="725" cy="250" r="14" fill="#E55B4D" opacity="0.3">
+                  <circle cx="725" cy="250" r="10" fill="#D4A574" />
+                  <circle cx="725" cy="250" r="14" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="14;20;14" dur="2s" begin="0.6s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* India */}
-                  <circle cx="820" cy="250" r="10" fill="#E55B4D" />
-                  <circle cx="820" cy="250" r="14" fill="#E55B4D" opacity="0.3">
+                  <circle cx="820" cy="250" r="10" fill="#D4A574" />
+                  <circle cx="820" cy="250" r="14" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="14;20;14" dur="2s" begin="0.8s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* Japan */}
-                  <circle cx="1000" cy="180" r="10" fill="#E55B4D" />
-                  <circle cx="1000" cy="180" r="14" fill="#E55B4D" opacity="0.3">
+                  <circle cx="1000" cy="180" r="10" fill="#D4A574" />
+                  <circle cx="1000" cy="180" r="14" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="14;20;14" dur="2s" begin="1s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* Australia */}
-                  <circle cx="990" cy="420" r="10" fill="#E55B4D" />
-                  <circle cx="990" cy="420" r="14" fill="#E55B4D" opacity="0.3">
+                  <circle cx="990" cy="420" r="10" fill="#D4A574" />
+                  <circle cx="990" cy="420" r="14" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="14;20;14" dur="2s" begin="1.2s" repeatCount="indefinite" />
                   </circle>
                 </g>
@@ -435,44 +435,44 @@ export const BenefitsSection = () => {
                 {/* Country Markers - Desktop (normal size) */}
                 <g className="desktop-markers">
                   {/* USA */}
-                  <circle cx="280" cy="250" r="7" fill="#E55B4D" />
-                  <circle cx="280" cy="250" r="10" fill="#E55B4D" opacity="0.3">
+                  <circle cx="280" cy="250" r="7" fill="#D4A574" />
+                  <circle cx="280" cy="250" r="10" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="10;15;10" dur="2s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* Germany */}
-                  <circle cx="610" cy="240" r="7" fill="#E55B4D" />
-                  <circle cx="610" cy="240" r="10" fill="#E55B4D" opacity="0.3">
+                  <circle cx="610" cy="240" r="7" fill="#D4A574" />
+                  <circle cx="610" cy="240" r="10" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="10;15;10" dur="2s" begin="0.2s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* Saudi Arabia */}
-                  <circle cx="650" cy="295" r="7" fill="#E55B4D" />
-                  <circle cx="650" cy="295" r="10" fill="#E55B4D" opacity="0.3">
+                  <circle cx="650" cy="295" r="7" fill="#D4A574" />
+                  <circle cx="650" cy="295" r="10" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="10;15;10" dur="2s" begin="0.4s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* UAE */}
-                  <circle cx="690" cy="320" r="7" fill="#E55B4D" />
-                  <circle cx="690" cy="320" r="10" fill="#E55B4D" opacity="0.3">
+                  <circle cx="690" cy="320" r="7" fill="#D4A574" />
+                  <circle cx="690" cy="320" r="10" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="10;15;10" dur="2s" begin="0.6s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* India */}
-                  <circle cx="795" cy="370" r="7" fill="#E55B4D" />
-                  <circle cx="795" cy="370" r="10" fill="#E55B4D" opacity="0.3">
+                  <circle cx="795" cy="370" r="7" fill="#D4A574" />
+                  <circle cx="795" cy="370" r="10" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="10;15;10" dur="2s" begin="0.8s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* Japan */}
-                  <circle cx="950" cy="300" r="7" fill="#E55B4D" />
-                  <circle cx="950" cy="300" r="10" fill="#E55B4D" opacity="0.3">
+                  <circle cx="950" cy="300" r="7" fill="#D4A574" />
+                  <circle cx="950" cy="300" r="10" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="10;15;10" dur="2s" begin="1s" repeatCount="indefinite" />
                   </circle>
                   
                   {/* Australia */}
-                  <circle cx="950" cy="480" r="7" fill="#E55B4D" />
-                  <circle cx="950" cy="480" r="10" fill="#E55B4D" opacity="0.3">
+                  <circle cx="950" cy="480" r="7" fill="#D4A574" />
+                  <circle cx="950" cy="480" r="10" fill="#D4A574" opacity="0.3">
                     <animate attributeName="r" values="10;15;10" dur="2s" begin="1.2s" repeatCount="indefinite" />
                   </circle>
                 </g>
@@ -537,17 +537,19 @@ export const BenefitsSection = () => {
               effect="expandIcon"
               icon={ArrowRight}
               iconPlacement="right"
-              className="text-white text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 font-semibold border-none"
+              className="text-black hover:text-white text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 font-semibold border-none"
               style={{ 
-                background: 'linear-gradient(90deg, #C82516 0%, #EE594C 51.44%, #C82516 100%)',
+                background: '#F5EAD7',
                 boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
                 fontFamily: 'var(--font-poppins), sans-serif'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(200, 37, 22, 0.5)';
+                e.currentTarget.style.background = '#8B7355';
+                e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(139, 115, 85, 0.5)';
                 e.currentTarget.style.transform = 'scale(1.05)';
               }}
               onMouseLeave={(e) => {
+                e.currentTarget.style.background = '#F5EAD7';
                 e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)';
                 e.currentTarget.style.transform = 'scale(1)';
               }}
@@ -562,7 +564,7 @@ export const BenefitsSection = () => {
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(229, 91, 77, 0.1) 0%, transparent 70%)',
+          background: 'radial-gradient(circle at 50% 50%, rgba(139, 115, 85, 0.15) 0%, transparent 70%)',
         }}
       />
     </motion.section>

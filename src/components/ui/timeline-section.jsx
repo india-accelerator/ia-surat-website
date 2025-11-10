@@ -53,7 +53,7 @@ export const TimelineSection = () => {
       id="timeline"
       className="w-full py-8 md:py-10 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(312.53deg, #EE5B4C -18.91%, #FFFFFF 121.57%)'
+        background: 'linear-gradient(312.53deg, #F5EAD7 -18.91%, #FFFFFF 121.57%)'
       }}
       initial="hidden"
       whileInView="visible"
@@ -65,20 +65,10 @@ export const TimelineSection = () => {
         <motion.div 
           className="relative rounded-md sm:rounded-lg py-6 sm:py-8 md:py-10 overflow-hidden shadow-xl mx-auto max-w-5xl"
           style={{
-            background: 'linear-gradient(135deg, #000000 0%, #1E071E 50%, #350602 100%)'
+            background: 'linear-gradient(135deg, #5D4A3D 0%, #3D3530 50%, #2D2420 100%)'
           }}
           variants={cardVariants}
         >
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0 opacity-30">
-            <Image
-              src="/Bg.png"
-              alt="Background Pattern"
-              fill
-              className="object-fill"
-              quality={100}
-            />
-          </div>
 
           {/* Content */}
           <motion.div 
@@ -93,7 +83,7 @@ export const TimelineSection = () => {
             >
               <motion.span 
                 style={{ 
-                  background: 'linear-gradient(180deg, #631A13 0%, #EE594C 50%, #631A13 100%)',
+                  background: 'linear-gradient(180deg, #D4A574 0%, #F5EAD7 50%, #D4A574 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
@@ -122,7 +112,7 @@ export const TimelineSection = () => {
               className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 md:mb-8 px-2"
               style={{ 
                 fontFamily: 'var(--font-poppins), sans-serif',
-                color: '#EE5B4C'
+                color: '#D4A574'
               }}
               variants={itemVariants}
             >
@@ -141,7 +131,7 @@ export const TimelineSection = () => {
               For queries, reach us at:{' '}
               <a 
                 href="mailto:support@name.com"
-                className="underline hover:text-[#EE5B4C] transition-colors duration-300 break-all sm:break-normal"
+                className="underline hover:text-[#D4A574] transition-colors duration-300 break-all sm:break-normal"
                 style={{ color: '#fff' }}
               >
                 support@name.com

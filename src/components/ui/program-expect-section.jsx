@@ -56,7 +56,7 @@ const IconBox = ({ icon: Icon, title, description, index }) => {
     <motion.div 
       className="flex flex-col items-center p-6 sm:p-8 h-full"
       style={{ 
-        background: 'linear-gradient(129.07deg, #FFFFFF 18.75%, #F7CBC7 108.92%)'
+        background: 'linear-gradient(129.07deg, #F5EAD7 18.75%, #E5D5C0 108.92%)'
       }}
       variants={cardVariants}
       initial="hidden"
@@ -67,7 +67,7 @@ const IconBox = ({ icon: Icon, title, description, index }) => {
       <motion.div 
         className="mb-4 p-4 rounded-full flex items-center justify-center"
         style={{ 
-          background: 'linear-gradient(39.47deg, #4D2420 5.65%, #BF483C 51.32%, #782821 103.43%)'
+          background: 'linear-gradient(39.47deg, #2D2420 5.65%, #3D3530 51.32%, #2D2420 103.43%)'
         }}
         variants={iconVariants}
       >
@@ -79,8 +79,8 @@ const IconBox = ({ icon: Icon, title, description, index }) => {
       
       {/* Title */}
       <motion.h3 
-        className="text-lg sm:text-xl font-normal mb-3 text-center text-black"
-        style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+        className="text-lg sm:text-xl font-normal mb-3 text-center"
+        style={{ fontFamily: 'var(--font-poppins), sans-serif', color: '#2D2420' }}
         variants={textVariants}
       >
         {title}
@@ -91,7 +91,7 @@ const IconBox = ({ icon: Icon, title, description, index }) => {
         className="text-sm sm:text-sm text-center leading-relaxed"
         style={{ 
           fontFamily: 'var(--font-poppins), sans-serif',
-          color: '#782821'
+          color: '#3D3530'
         }}
         variants={textVariants}
       >
@@ -155,7 +155,7 @@ export const ProgramExpectSection = () => {
       id="what-to-expect"
       className="w-full py-16 sm:py-20 md:py-24 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #000000 0%, #1E071E 50%, #782821 100%)'
+        background: 'linear-gradient(180deg, #000000 0%, #2D2420 50%, #2D2420 100%)'
       }}
       initial="hidden"
       whileInView="visible"
