@@ -18,8 +18,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "IA Next Stop",
-  description: "IA Next Stop",
+  title: "IA Surat",
+  description: "IA Surat",
 };
 
 export default function RootLayout({ children }) {

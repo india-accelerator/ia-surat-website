@@ -368,10 +368,10 @@ export const Navbar01 = React.forwardRef(({
             effect="expandIcon"
             icon={ArrowRightIcon}
             iconPlacement="right"
-            className="text-xs sm:text-sm font-medium px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 h-8 sm:h-9 rounded-full shadow-sm text-white hover:opacity-90 whitespace-nowrap"
+            className="text-xs sm:text-sm font-medium px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 h-8 sm:h-9 rounded-full shadow-sm text-white hover:opacity-90 whitespace-nowrap border-b-2 border-#fff"
             style={{
               background: 'linear-gradient(90deg, #2D2420 12.02%, #5D4A3D 49.04%, #2D2420 91.83%)',
-              border: 'none'
+              // border: 'none'
             }}
             onClick={(e) => {
               e.preventDefault();

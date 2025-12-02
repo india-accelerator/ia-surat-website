@@ -91,25 +91,36 @@ export const HeroSection = () => {
       >
         {/* Logo */}
         <motion.div 
-          className="mb-6 sm:mb-8 md:mb-6 flex flex-col items-center w-full max-w-[280px] sm:max-w-[320px] md:max-w-[400px]"
+          className="mb-4 sm:mb-4 md:mb-4 flex flex-col items-center w-full max-w-[200px] sm:max-w-[240px] md:max-w-[300px]"
           variants={logoVariants}
         >
-          <div className="relative w-full aspect-[3/2]">
+          <div className="relative w-full aspect-[2/1]">
             <Image 
-              src="/ia-program-logo.png" 
-              alt="IA Next Stop" 
+              src="/ialogo.png" 
+              alt="IA Surat" 
               fill
               className="object-contain"
               priority
-              sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 400px"
+              sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, 300px"
             />
           </div>
         </motion.div>
         
+        {/* Building the Future of Bharat Heading */}
+        <motion.h2 
+          className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-semibold mb-3 sm:mb-8 leading-tight px-2" 
+          style={{ 
+            fontFamily: 'var(--font-poppins), sans-serif',
+            color: '#ffffff'
+          }}
+          variants={itemVariants}
+        >
+          Inviting Startup Applications in
+        </motion.h2>
 
         {/* IA Lands in Tricity */}
         <motion.h1 
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold mb-4 sm:mb-6 leading-tight sm:leading-tight uppercase px-2" 
+          className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-4 sm:mb-6 leading-tight sm:leading-tight uppercase px-2" 
           style={{ 
             fontFamily: 'var(--font-poppins), sans-serif',
             background: 'linear-gradient(180deg, #a55d5d 17.55%, #ffffff 50%, #a55d5d 83.42%)',
@@ -119,7 +130,7 @@ export const HeroSection = () => {
           }}
           variants={itemVariants}
         >
-          We’re coming to Tricity 
+          Surat
         </motion.h1>
             {/* Location Text */}
             <motion.p 
@@ -127,7 +138,7 @@ export const HeroSection = () => {
               style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
               variants={itemVariants}
             >
-              Chandigarh , Panchkula , Mohali
+              From idea to IPO, we're here to back the next generation of change makers.
             </motion.p>
 
         {/* CTA Button */}

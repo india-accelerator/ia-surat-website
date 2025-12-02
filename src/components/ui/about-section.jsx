@@ -89,7 +89,7 @@ export const AboutSection = () => {
                 }}
                 variants={itemVariants}
               >
-                IA LANDS IN TRICITY
+                IA LANDS IN SURAT
               </motion.div>
             </motion.div>
             
@@ -102,8 +102,7 @@ export const AboutSection = () => {
               }}
               variants={itemVariants}
             >
-              Big ideas don’t belong to <br />
-              big cities anymore
+              Time to build <br/> global startups
             </motion.h2>
           </motion.div>
 
@@ -121,8 +120,7 @@ export const AboutSection = () => {
               }}
               variants={itemVariants}
             >
-              Are You Ready
-              to Step In?
+              Are You Ready?
             </motion.h3>
             
             <motion.p 
@@ -130,14 +128,14 @@ export const AboutSection = () => {
               style={{ fontFamily: 'var(--font-poppins), sans-serif', color: '#3D3530' }}
               variants={itemVariants}
             >
-              Not every big idea starts in metros. Some start right here—in Tricity's hostels, co-working corners and late-night chai break chats. IA's Next Stop brings early to growth-stage founders from Chandigarh, Mohali and Panchkula to pitch live on stage and showcase what they have been building silently.
+Surat has always been a city of doers. A city that doesn’t wait for opportunity but builds it. Now, it’s time to turn that drive into startups that scale.
             </motion.p>
             <motion.p 
-              className="text-base sm:text-lg md:text-xl font-medium leading-relaxed"
+              className="text-base sm:text-lg md:text-lg leading-relaxed"
               style={{ fontFamily: 'var(--font-poppins), sans-serif', color: '#2D2420' }}
               variants={itemVariants}
             >
-              Your idea deserves its moment.
+             We’re inviting ambitious founders, product builders and innovators to join our ecosystem designed to back bold ideas and help startups build a stronger growth trajectory from Surat to global markets.
             </motion.p>
             <motion.div
               variants={itemVariants}

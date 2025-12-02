@@ -116,7 +116,7 @@ export const TimelineSection = () => {
               }}
               variants={itemVariants}
             >
-              Applications Close On 13 November 2025
+              Applications Close On 20th November 2025
             </motion.p>
 
             {/* Contact Information */}
@@ -133,8 +133,7 @@ export const TimelineSection = () => {
                 href="mailto:support@name.com"
                 className="underline hover:text-[#D4A574] transition-colors duration-300 break-all sm:break-normal"
                 style={{ color: '#fff' }}
-              >
-                support@name.com
+              >info@indiaaccelerator.live
               </a>
             </motion.p>
 

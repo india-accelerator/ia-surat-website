@@ -97,6 +97,15 @@ export const StartupApplicationForm = {
       stepTitle: "Final Details",
       stepDescription: "Almost done! Just a few more details"
     },
+    {
+      question: "Pitch Deck (Google Drive Link)",
+      question_type: "text",
+      placeholder: "Enter your Google Drive link",
+      field_name: "dataRoomGDriveLinkPrimary",
+      validation: "url",
+      stepTitle: "Final Details",
+      stepDescription: "Almost done! Just a few more details"
+    },
   ],
 };
 

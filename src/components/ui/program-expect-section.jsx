@@ -105,23 +105,23 @@ export const ProgramExpectSection = () => {
   const features = [
     {
       icon: Mic,
-      title: 'LIVE Pitching',
-      description: 'Present your startup to top VCs, mentors, and partners.',
+      title: 'Mentorship',
+      description: 'Gain insights from 150+ mentors and industry experts.',
     },
     {
       icon: User,
-      title: 'Mentor Access',
-      description: 'Personalized guidance from domain experts.',
+      title: 'Funding Access',
+      description: 'Capital Commitments of INR 500+ Cr through 5 active funds.',
     },
     {
       icon: Handshake,
-      title: 'Investor connect',
-      description: 'Get connected with top institutional and angel investors.',
+      title: 'Expansive Network',
+      description: '50+ corporate & university partners across India.',
     },
     {
       icon: Layers,
-      title: 'Growth Amplifier (IA ecosystem)',
-      description: 'Unlock funding and pilot opportunities.',
+      title: 'Workspace Advantage',
+      description: '29+ hubs in 13+ cities with 7000+ seats of innovation.',
     },
   ];
 

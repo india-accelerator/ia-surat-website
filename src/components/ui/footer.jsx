@@ -18,7 +18,7 @@ export const Footer = () => {
     },
     {
       icon: Link,
-      href: 'https://indiaaccelerator.co/',
+      href: 'https://indiaaccelerator.live/',
       label: 'IA',
     },
     {

@@ -16,7 +16,7 @@ export default function Home() {
       <CounterSection />
       <AboutSection />
       <ProgramExpectSection />
-      <EligibilityCriteriaSection />
+      {/* <EligibilityCriteriaSection /> */}
       <BenefitsSection />
       <TimelineSection />
       <Footer />

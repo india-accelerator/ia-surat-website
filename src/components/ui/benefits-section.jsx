@@ -2,19 +2,18 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Star, Handshake, Layers, ArrowRight } from 'lucide-react';
+import { Globe2, Handshake, Layers, TrendingUp, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-const BenefitCard = ({ icon: Icon, title, description, index }) => {
+const BenefitCard = ({ icon: Icon, title, index }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    hidden: { opacity: 0, x: -20 },
     visible: {
       opacity: 1,
-      y: 0,
-      scale: 1,
+      x: 0,
       transition: {
         type: 'spring',
         stiffness: 100,
@@ -40,10 +39,10 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
   };
 
   const textVariants = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0, x: 10 },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
         duration: 0.5,
         delay: index * 0.1 + 0.3
@@ -53,7 +52,7 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
 
   return (
     <motion.div
-      className="group relative p-6 sm:p-8 transition-all duration-300 cursor-pointer h-full flex flex-col"
+      className="group relative p-4 sm:p-6 transition-all duration-300 cursor-pointer flex items-center gap-4 sm:gap-6"
       style={{
         background: 'linear-gradient(324.12deg, #F5EAD7 -7.78%, #FEFBF7 99.7%)'
       }}
@@ -69,7 +68,7 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
       {/* Hover effect - slight scale and shadow */}
       <div 
         className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-          isHovered ? 'shadow-2xl scale-[1.02]' : 'shadow-md scale-100'
+          isHovered ? 'shadow-xl' : 'shadow-md'
         }`}
         style={{
           background: 'linear-gradient(324.12deg, #F5EAD7 -7.78%, #FEFBF7 99.7%)',
@@ -77,10 +76,10 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
         }}
       />
       
-      <div className="relative z-10 flex flex-col items-center text-center flex-1 justify-center">
-        {/* Circular Icon Container */}
+      <div className="relative z-10 flex items-center gap-4 sm:gap-6 w-full">
+        {/* Circular Icon Container - Left Side */}
         <motion.div 
-          className={`mb-4 p-4 rounded-full flex items-center justify-center transition-all duration-300 ${
+          className={`shrink-0 p-3 sm:p-4 rounded-full flex items-center justify-center transition-all duration-300 ${
             isHovered ? 'scale-110' : 'scale-100'
           }`}
           style={{
@@ -89,27 +88,18 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
           variants={iconVariants}
         >
           <Icon 
-            className="w-6 h-6 sm:w-7 sm:h-7 text-white"
+            className="w-5 h-5 sm:w-6 sm:h-6 text-white"
           />
         </motion.div>
 
-        {/* Card Title */}
+        {/* Card Title - Right Side */}
         <motion.h3 
-          className="text-lg sm:text-xl md:text-2xl font-bold mb-3 transition-colors duration-300"
+          className="text-base sm:text-lg md:text-xl font-bold transition-colors duration-300 flex-1"
           style={{ fontFamily: 'var(--font-poppins), sans-serif', color: '#2D2420' }}
           variants={textVariants}
         >
           {title}
         </motion.h3>
-
-        {/* Card Description */}
-        <motion.p 
-          className="text-sm sm:text-base font-light leading-relaxed transition-colors duration-300"
-          style={{ fontFamily: 'var(--font-poppins), sans-serif', color: '#5D4A3D' }}
-          variants={textVariants}
-        >
-          {description}
-        </motion.p>
       </div>
     </motion.div>
   );
@@ -118,24 +108,20 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
 export const BenefitsSection = () => {
   const benefits = [
     {
-      icon: Search,
-      title: 'Startup Discovery',
-      description: 'Get discovered by corporates, investors & innovation hubs.',
-    },
-    {
-      icon: Star,
-      title: 'Market Expansion',
-      description: 'Gain recognition through media & ecosystem coverage.',
+      icon: Globe2,
+      title: 'Global Ecosystem',
     },
     {
       icon: Handshake,
       title: 'Investor Connect',
-      description: 'Exclusive investor matchmaking sessions.',
     },
     {
       icon: Layers,
       title: 'Cross-Border Growth',
-      description: 'Partner with top institutions, labs & incubators.',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Market Expansion',
     },
   ];
 
@@ -217,15 +203,14 @@ export const BenefitsSection = () => {
           </motion.p>
         </motion.div>
 
-        {/* Benefit Cards Grid - Horizontal scroll on mobile, grid on larger screens */}
+        {/* Benefit Cards - Single Row Layout */}
         <div className="overflow-x-auto sm:overflow-visible -mx-4 sm:mx-0 px-4 sm:px-0 mb-12">
-          <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 min-w-max sm:min-w-0 sm:items-stretch">
+          <div className="flex gap-4 sm:gap-6 lg:gap-8 min-w-max sm:min-w-0">
             {benefits.map((benefit, index) => (
-              <div key={index} className="shrink-0 w-[280px] sm:w-auto sm:flex sm:flex-col">
+              <div key={index} className="shrink-0 w-[280px] sm:w-auto sm:flex-1">
                 <BenefitCard
                   icon={benefit.icon}
                   title={benefit.title}
-                  description={benefit.description}
                   index={index}
                 />
               </div>
