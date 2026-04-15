@@ -7,12 +7,41 @@ import { StartupApplicationForm } from '@/lib/form-data';
 import { motion } from 'framer-motion';
 import { Check, Loader2 } from 'lucide-react';
 
+const FORWARD_PRIMARY_WEBHOOK_API = '/api/forward-primary-webhook';
+const FORWARD_NEW_WEBHOOK_API = '/api/forward-new-webhook-only';
+
+const SECONDARY_WEBHOOK_ORGANIZATION_ID =
+  '6c0b6c93-c04c-4249-8e89-e6a2ed904db6';
+
 // Map startup stage from form value to webhook format
 const mapStartupStage = (stage) => {
   if (!stage) return '';
   // Return the stage in uppercase
   return stage.toUpperCase();
 };
+
+/** Secondary webhook — updated DB key names */
+const buildSecondaryWebhookPayload = (values) => ({
+  status: 'ACTIVE',
+  founderEmail: values.email || '',
+  organizationId: SECONDARY_WEBHOOK_ORGANIZATION_ID,
+  name: values.brandName || '',
+  legalName: values.legalName || '',
+  description: values.briefYourStartup || '',
+  startupStage: mapStartupStage(values.startupStage || ''),
+  sourceType: '',
+  website: values.website || '',
+  founderLinkdin: values.linkedin || '',
+  location: values.address || '',
+  domains: values.domain || '',
+  thesisId: '',
+  evaluationStage: 'APPLICATION_RECEIVED',
+  dataRoomGDriveLinkPrimary: values.dataRoomGDriveLinkPrimary || '',
+  foundedDate:
+    values.foundedIn !== undefined && values.foundedIn !== null && String(values.foundedIn).trim() !== ''
+      ? String(values.foundedIn).trim()
+      : '',
+});
 
 // Format stage for display (convert to title case with spaces)
 const formatStageForDisplay = (stage) => {
@@ -192,19 +221,40 @@ export const StartupApplicationFormComponent = () => {
         }
       };
 
-      const response = await fetch('https://automate.indiaaccelerator.live/webhook/8b8577e9-d0ce-4108-b1bd-85ecb7f20dfc', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(webhookData),
-      });
+      const secondaryPayload = buildSecondaryWebhookPayload(values);
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      const jsonPost = (url, bodyObj) =>
+        fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(bodyObj),
+          cache: 'no-store',
+        });
+
+      const primaryResponse = await jsonPost(
+        FORWARD_PRIMARY_WEBHOOK_API,
+        webhookData
+      );
+
+      if (!primaryResponse.ok) {
+        throw new Error(`HTTP error! status: ${primaryResponse.status}`);
       }
 
-      const result = await response.json().catch(() => ({})); // Handle case where response might not be JSON
+      try {
+        const secondaryResponse = await jsonPost(
+          FORWARD_NEW_WEBHOOK_API,
+          secondaryPayload
+        );
+        if (!secondaryResponse.ok) {
+          console.warn(
+            'Secondary webhook may not have received data. Check the forward-new-webhook-only API route and upstream automate URL.'
+          );
+        }
+      } catch (e) {
+        console.error('Secondary webhook request failed:', e);
+      }
+
+      const result = await primaryResponse.json().catch(() => ({}));
       
       setIsSubmitted(true);
       console.log('Form submitted successfully:', result);
