@@ -119,7 +119,6 @@ const CloseIcon = ({ className, ...props }) => (
 const defaultNavigationLinks = [
   { href: '#about', label: 'About' },
   { href: '#what-to-expect', label: 'What To Expect' },
-  { href: '#eligibility-criteria', label: 'Eligibility Criteria' },
   { href: '#why-bigshift', label: 'Why Us?' },
   { href: '#timeline', label: 'Queries' },
 ];
